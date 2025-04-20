@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm install typescript @types/react @types/node --save-dev && npm install tailwindcss postcss autoprefixer --save && next build",
+    "prebuild": "npm install typescript@5 @types/react@19 @types/node@20 eslint@9 --no-save",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },

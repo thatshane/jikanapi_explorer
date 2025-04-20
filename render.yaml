@@ -2,11 +2,7 @@ services:
   - type: web
     name: animedb
     env: node
-    buildCommand: >
-      npm ci &&
-      npm install --save-dev typescript@5 @types/react@19 @types/node@20 &&
-      npm install tailwindcss postcss autoprefixer --save &&
-      npm run build
+    buildCommand: bash ./render-build.sh
     startCommand: npm start
     envVars:
       - key: NODE_ENV
